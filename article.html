@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>杉达</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--解决input手机端点击放大问题-->
+    <meta name="viewport" content="width=1366,inital-scale=1.0,user-scalable=no;">
+    <!-- IE兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 国产浏览器高速模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入组件库 -->
+    <link rel="stylesheet" href="bootstraps/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/commons.css">
+</head>
+<style>
+    .topBg{
+        width: 100%;
+        height: 453px;
+        background: url("./img/article.png");
+        background-size:cover;
+    }
+    h3{
+        color: #0d253e;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: left;
+        letter-spacing: 0.6363635px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.6363635px;
+        text-align: left;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    p:nth-child(2n){
+        display: none;
+    }
+    .el-main p:first-child{
+        color: #0d253e;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0.6363635px;
+    }
+    h1, .title{
+        color: #0d253e;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 42px;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+</style>
+<body>
+<div id="app" v-cloak>
+    <el-container>
+        <el-header>
+            <a class="logoPanel" href="index.html">
+                <img class="logo" src="img/logo.png"/>
+            </a>
+            <div class="headLink">
+                <ul class="topHeader">
+                    <li class="active"><a href="index.html">首页</a></li>
+                    <li><a href="seo.html">SEO优化</a></li>
+                    <li><a href="sem.html">SEM管理</a></li>
+                    <li><a href="orm.html">ORM管理</a></li>
+                    <li><a href="manage.html">案例</a></li>
+                </ul>
+            </div>
+        </el-header>
+        <el-main v-html="article" style="min-height: 610px">
+           <!-- <div class="topBg"></div>
+            <div class="meetingProblem">
+                <div class="problemText">建立符合搜索抓取习惯的网站</div>
+            </div>
+            <div class="el-row" style="margin-top: 40px;margin-bottom: 160px">
+                <article style="width: 1200px;margin: auto;text-align: left">
+                    <div class="title">编者按：前两周简要地给大家介绍了搜索抓取系统工作原理，根据该工作原理今天简要介绍一下如何建立网站是符合搜索引擎抓取系统习惯的。</div>
+                    <h3>1、简单明了的网站结构</h3>
+                    <p> Spider抓取相当于对web这个有向图进行遍历，那么一个简单明了结构层次分明的网站肯定是它所喜欢的，并尽量保证spider的可读性。</p>
+                    <p> （1）树型结构最优的结构即“首页—频道—详情页”；</p>
+                    <p> （2）扁平首页到详情页的层次尽量少，既对抓取友好又可以很好的传递权重。</p>
+                    <p> （3）网状保证每个页面都至少有一个文本链接指向，可以使网站尽可能全面的被抓取收录，内链建设同样对排序能够产生积极作用。</p>
+                    <p> （4）导航为每个页面加一个导航方便用户知晓所在路径。</p>
+                    <p> （5）子域与目录的选择相信有大批的站长对此有疑问，在我们看来，当内容较少并且内容相关度较高时建议以目录形式来实现，有利于权重的继承与收敛；当内容量较多并且与主站相关度略差时建议再以子域的形式来实现。</p>
+                </article>
+                <article style="width: 1200px;margin: auto;text-align: left">
+                    <h3>2、简洁美观的url规则</h3>
+                    <p> （1）唯一性网站中同一内容页只与唯一一个url相对应，过多形式的url将分散该页面的权重，并且目标url在系统中有被滤重的风险；</p>
+                    <p> （2）简洁性动态参数尽量少，保证url尽量短；</p>
+                    <p> （3）美观性使得用户及机器能够通过url即可判断出页面内容的主旨；</p>
+                    <p> （4）导航为每个页面加一个导航方便用户知晓所在路径。</p>
+                    <p>我们推荐如下形式的url：url尽量短且易读使得用户能够快速理解，例如使用拼音作为目录名称；同一内容在系统中只产生唯一的url与之对应，去掉无意义的参数；如果无法保证url的唯一性，尽量使不同形式的url301到目标url；防止用户输错的备用域名301至主域名。
+                    </p>
+                </article>
+                <article style="width: 1200px;margin: auto;text-align: left">
+                    <h3>3、其他注意事项</h3>
+                    <p> （1）不要忽略倒霉的robots文件，默认情况下部分系统robots是封禁搜索引擎抓取的，当网站建立后及时查看并书写合适的robots文件，网站日常维护过程中也要注意定期检查；</p>
+                    <p> （2）建立网站sitemap文件、死链文件，并及时通过百度站长平台进行提交；</p>
+                    <p> （3）部分电商网站存在地域跳转问题，有货无货建议统一做成一个页面，在页面中标识有无货即可，不要此地区无货即返回一个无效页面，由于spider出口的有限性将造成正常页面无法收录。</p>
+                    <p> （4）合理利用站长平台提供的robots、sitemap、索引量、抓取压力、死链提交、网站改版等工具。</p>
+                    <p> 如果大家对搜索抓取还有别的疑问，大家可以到[学院同学汇][学习讨论] 《建立符合搜索抓取习惯的网站》讨论帖中发表自己的看法，我们的工作人员会关注这里并与大家进行探讨。</p>
+                </article>
+            </div>-->
+
+        </el-main>
+        <div class="footer"></div>
+    </el-container>
+</div>
+</body>
+
+<script src="jQuery/jquery-2.1.1.min.js"> </script>
+<script src="js/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            article:''
+        },
+        mounted: function() {
+            $('.footer').load('common/footer.html');
+            var id= window.location.search;
+                id=id.substring(1, id.length);
+            var _self = this;
+            $.ajax({
+                type: "get",
+                url: "http://www.mysandsea.com:8080/content",
+                data:{titleId: id},
+                dataType: "json",
+                success: function(data){
+                    if(data.status == 0 ){
+                        if(data.data.trim() == ''){
+                            _self.article = ' <div class="topBg"></div>' + '<h1>暂无数据</h1>';
+                        }
+                      else   _self.article = ' <div class="topBg"></div>' + data.data;
+                    }
+                    else{
+                        _self.article = ' <div class="topBg"></div>' + '<h1>暂无数据</h1>';
+                        alert(data.msg)
+                    }
+                }, error: function () {
+                    _self.article = ' <div class="topBg"></div>' + '<h1>服务器内部错误，请联系管理员</h1>';
+                }
+            });
+        },
+    })
+</script>
+</html>

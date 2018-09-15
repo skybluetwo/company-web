@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>杉达</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--解决input手机端点击放大问题-->
+    <meta name="viewport" content="width=1366,inital-scale=1.0,user-scalable=no;">
+    <!-- IE兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 国产浏览器高速模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入组件库 -->
+    <link rel="stylesheet" href="bootstraps/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/commons.css">
+    <link rel="stylesheet" href="css/company.css">
+</head>
+<body>
+<div id="app" class="company" v-cloak>
+    <section class="el-container is-vertical">
+        <header class="el-header" style="height: 60px;">
+            <a class="logoPanel" href="index.html">
+                <img class="logo" src="img/logo.png"/>
+            </a>
+            <div class="headLink">
+                <ul class="topHeader">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="seo.html">SEO优化</a></li>
+                    <li><a href="sem.html">SEM管理</a></li>
+                    <li class="active"><a href="#">ORM管理</a></li>
+                    <li><a href="manage.html">案例</a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="el-main">
+            <div class="topBg">
+                <div class="companyMessage">
+                    <div class="middle-box">
+                        <div class="middle-inner">
+                            <p><span class="companyText">公司介绍</span><br/></p>
+                            <p><div class="companySubtext">Service Customer</div></p>
+                            <p><div class="companySubTwoText">公司介绍：SANDA是一家专业的线上营销服务公司。
+                                公司致力于向各类企业提供整合营销服务和技术，希望每一家企业变得伟大。
+                                基于搜索优化的网络营销平台，形成搜索引擎优化（SEO)、搜索引擎营销（SEM）、
+                                在线名誉管理（ORM）以及信息流（FEED）等服务体系，
+                                为企业提供一站式的整合营销解决方案，实现企业互联网营销效果最大化。
+                            </div></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="advantage" style="margin-top: 150px">
+                <el-row  class="row-bg">
+                    <div class="meetingProblem">
+                        <div class="problemText">团队介绍</div>
+                        <div class="problemSubText">Service Customer</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <div class="panel-body">
+                        <div class="circleList" v-for="(page,index) in pages" :key="index" :style="{'margin-top':index!=0? '20px':''}">
+                            <div class="advantageList" v-for="(items,subindex) in 4" :key="subindex" >
+                                <div class="advantageLog" v-if="member[index*4 +subindex]">
+                                    <img class="top40" :src="'http://www.mysandsea.com:8080'+member[index*4 +subindex].image"/>
+                                    <div class="middle-box">
+                                        <div class="middle-inner">
+                                            <p><span class="advantageText" >{{member[index*4 +subindex].member_name}}</span><br/></p>
+                                            <p><div class="advantageSubText">{{member[index*4 +subindex].describe}}</div></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div v-else></div>
+                            </div>
+                        </div>
+                    </div>
+                </el-row>
+            </div>
+
+        </main>>
+        <div class="footer"></div>
+    </section>>
+</div>
+</body>
+
+<script src="jQuery/jquery-2.1.1.min.js"> </script>
+<script src="js/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return { member: [],pages: 0 }
+        },
+        mounted: function() {
+            $('.footer').load('common/footer.html');
+            var _self = this;
+            $.ajax({
+                type: "get",
+                url: "http://www.mysandsea.com:8080/member/",
+                dataType: "json",
+                success: function(data){
+                    if(data.status == 0 ){
+                        _self.member = data.data;
+                        _self.pages = Math.ceil(data.data.length / 4);
+                        console.log(data.data)
+                    }
+                    else{
+                        alert(data.msg);
+                    }
+                }
+            });
+        },
+        methods:{
+
+        }
+
+    })
+</script>
+</html>

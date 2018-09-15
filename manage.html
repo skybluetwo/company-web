@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>杉达</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--解决input手机端点击放大问题-->
+    <meta name="viewport" content="width=1366,inital-scale=1.0,user-scalable=no;">
+    <!-- IE兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 国产浏览器高速模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入组件库 -->
+    <link rel="stylesheet" href="bootstraps/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/commons.css">
+</head>
+<style>
+    body{
+        font-family:PingFangSC,"Microsoft YaHei","Times New Roman";
+    }
+    .circleImg .homeicon{
+        position: relative;
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+    .circleImg .majorName{
+        position: relative;
+        color: #0d253e;
+        font-size: 20px;
+        top: 40px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 32px;
+    }
+    .circleImg .majorSubName{
+        position: relative;
+        color: #A6B0B9;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 30px;
+        top: 40px;
+    }
+    .circleImg{
+        width: calc(25%)
+    }
+    .advantageList {
+        width: calc(22%);
+        height: 375px;
+    }
+    .service .advantageList{
+        width: calc(14.67%);
+        height:160px
+    }
+    .advantageList .advantageLog{
+        height: 375px;
+    }
+    .service .advantageList .advantageLog{
+        height: 160px;
+        width: 160px;
+        background: #ffffff;
+        color: #0d253e;
+        font-size: 14px;
+        font-weight: 400;
+        box-shadow: 0px 7px 40px #f0f2f5;
+    }
+    .service .top40{
+        top: 20px;
+    }
+    .service .cartText{
+        width: 100%;
+        bottom: 40px;
+        font-size: 14px;
+        position: absolute;
+        text-align: center;
+
+    }
+
+    .topBg{
+        background: url("./img/company.png");
+        height: 453px;
+        position: relative;
+        background-size:cover;
+    }
+
+</style>
+<body>
+<div id="app">
+    <el-container>
+        <el-header>
+            <a class="logoPanel" href="index.html">
+                <img class="logo" src="img/logo.png"/>
+            </a>
+            <div class="headLink">
+                <ul class="topHeader">
+                    <li ><a href="index.html">首页</a></li>
+                    <li><a href="seo.html">SEO优化</a></li>
+                    <li><a href="sem.html">SEM管理</a></li>
+                    <li><a href="orm.html">ORM管理</a></li>
+                    <li class="active"><a href="manage.html">案例</a></li>
+                </ul>
+            </div>
+        </el-header>
+        <el-main>
+            <div class="topBg home">
+                <div class="middle-box">
+                    <div class="middle-inner">
+                        <p><span class="seoText">整合营销服务提供商</span><br/></p>
+                        <p><div class="seoSubtext">Make company great!</div></p>
+                    </div>
+                </div>
+            </div>
+            <div class="service" style="margin-bottom: 80px">
+                <el-row type="flex" class="row-bg " justify="center">
+                    <div class="meetingProblem">
+                        <div class="problemText">行业案例</div>
+                        <div class="problemSubText">Service Customer</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <div class="panel-body">
+                        <div class="circleList">
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img class="top40" src="img/service1.png"/>
+                                    <div class="cartText">安安宠医</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service2.png"/>
+                                    <div class="cartText">乐享屋</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service3.png"/>
+                                    <div class="cartText">拍拍贷</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service4.png"/>
+                                    <div class="cartText">仁力名才</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service5.png"/>
+                                    <div class="cartText">诶站国际</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service6.png"/>
+                                    <div class="cartText">太美医疗</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <div class="panel-body">
+                        <div class="circleList">
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img class="top40" src="img/service7.png"/>
+                                    <div class="cartText">上置集团</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service8.png"/>
+                                    <div class="cartText">云敞科技</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service9.png"/>
+                                    <div class="cartText">晨驭科技</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service10.png"/>
+                                    <div class="cartText">宝趣旅游</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service11.png"/>
+                                    <div class="cartText">绿霖美建</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service12.png"/>
+                                    <div class="cartText">唯存摄影</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </el-row>
+            </div>
+
+        </el-main>
+        <div class="footer"></div>
+    </el-container>
+</div>
+</body>
+
+<script src="jQuery/jquery-2.1.1.min.js"> </script>
+<script src="js/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return { visible: false }
+        },
+        mounted: function() {
+            $('.footer').load('common/footer.html');
+        },
+    })
+    $("#backUp").click(function () {
+        window.scrollTo(0,0);
+    })
+</script>
+</html>

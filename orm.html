@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>杉达</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--解决input手机端点击放大问题-->
+    <meta name="viewport" content="width=1366,inital-scale=1.0,user-scalable=no;">
+    <!-- IE兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 国产浏览器高速模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入组件库 -->
+    <link rel="stylesheet" href="bootstraps/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/commons.css">
+</head>
+<style>
+    .twoHeiht{
+        height: 530px;
+        width: 530px;
+        display: inline-block;
+        margin: auto;
+        background-color: #f9fafc;
+        padding: 60px 100px;
+    }
+    .twoHeiht div{
+        color: #152c45;
+    }
+    .twoHeiht .seoAdvan{
+        color: #152c45;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .twoHeiht .seoAdvanSub{
+        color: #4b5c70;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+    }
+    .advantageList .advantageLog{
+        margin: auto;
+    }
+    .slidecCircle .circle{
+        width: 8px;
+        height:8px;
+        border-radius: 50%;
+        background: #3c3c3c;
+        display: inline-block;
+        margin: 1px 3px;
+    }
+    .slidecCircle .active{
+        width: 12px;
+        height:12px;
+        border-radius: 50%;
+        border: 2px solid #3c3c3c;
+        background: transparent;
+        margin: 0px 3px;
+    }
+</style>
+<body>
+<div id="app" class="orm">
+    <section class="el-container is-vertical">
+        <header class="el-header" style="height: 60px;">
+            <a class="logoPanel" href="index.html">
+                <img class="logo" src="img/logo.png"/>
+            </a>
+            <div class="headLink">
+                <ul class="topHeader">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="seo.html">SEO优化</a></li>
+                    <li><a href="sem.html">SEM管理</a></li>
+                    <li class="active"><a href="#">ORM管理</a></li>
+                    <li><a href="manage.html">案例</a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="el-main">
+            <div class="topBg">
+                <div class="middle-box">
+                    <div class="middle-inner">
+                        <p><span class="seoText">ORM在线名誉管理</span><br/></p>
+                        <p><div class="seoSubtext">对企业在互联网上的展示信息进行优化和传播，让用户更了解你!</div></p>
+                    </div>
+                </div>
+            </div>
+            <div  class="row-bg  el-row is-justify-center el-row--flex" style="margin-top: 80px;">
+                <div class="el-col el-col-10">
+                    <img class="" src="./img/manage1.png"/>
+                </div>
+                <div class="el-col el-col-10">
+                    <slide :slidearr="slidearr"></slide>
+                </div>
+            </div>
+            <div  class="row-bg  el-row is-justify-center el-row--flex">
+                <div class="el-col el-col-10">
+                    <slide :slidearr="slidesub"></slide>
+                </div>
+                <div class="el-col el-col-10">
+                    <img class="" src="./img/manage2.png"/>
+                </div>
+            </div>
+            <div class="advantage">
+                <div  class="el-row row-bg">
+                    <div class="meetingProblem">
+                        <div class="problemText">我们的优势</div>
+                        <div class="problemSubText">Service Customer</div>
+                    </div>
+
+                </div>
+                <div  class="el-row">
+                    <div class="panel-body">
+                        <div class="circleList">
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img class="top40" src="img/advantage1.png"/>
+                                    <div class="middle-box">
+                                        <div class="middle-inner">
+                                            <p><span class="advantageText">提升品牌形象</span><br/></p>
+                                            <p><div class="advantageSubText">高排名=广泛用户认知度，有助于提升公司在用户心中的形象</div></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/advantage2.png"/>
+                                    <div class="middle-box">
+                                        <div class="middle-inner">
+                                            <p><span class="advantageText">引入目标客户</span><br/></p>
+                                            <p><div class="advantageSubText">SEO流量较为精准，为网站引入精准目标客户</div></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/advantage3.png"/>
+                                    <div class="middle-box">
+                                        <div class="middle-inner">
+                                            <p><span class="advantageText">效果长期稳定</span><br/></p>
+                                            <p><div class="advantageSubText">相较于竞价排名，SEO排名更为持久，后期维护成本低，持续时间久</div></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/advantage4.png"/>
+                                    <div class="middle-box">
+                                        <div class="middle-inner">
+                                            <p><span class="advantageText">较高投资回报率</span><br/></p>
+                                            <p><div class="advantageSubText">搜索用户精准度及转化意向高，投资回报率高</div></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <div class="footer"></div>
+    </section>
+</div>
+</body>
+
+<script src="jQuery/jquery-2.1.1.min.js"> </script>
+<script src="js/vue.js"></script>
+<!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+<script>
+    Vue.component('slide', {
+        data: function () {
+            return {
+                mark: 0
+            }
+        },
+        props: {
+            slidearr: Array,
+        },
+        template: ' <div>' +
+                        '<div class="honor twoHeiht" v-for="(item,index) in slidearr" v-show="index===mark":key="">' +
+                            '<div style="height:47px;">' +
+                                '<img src="./img/start.png" style="float: left;height: 47px">' +
+                            '</div>' +
+                            '<div class="seoAdvan" style="height:42px">{{item.title}}</div>' +
+                            '<div class="seoAdvanSub" style="width: 100%">{{item.content}}</div> ' +
+                        '</div>' +
+                        '<div class="slidecCircle" style="bottom: 100px;position: absolute;padding-left:120px">' +
+                            ' <div class="circle" v-for="(data, index) in slidearr" ' +
+                                ':key="index" @click="change(index)" :class="{\'active\':index===mark}"></div>' +
+                            '</div> ' +
+                   '</div>',
+        created : function(){
+            this.play()
+        },
+        methods:{
+            autoPlay: function (){
+                var len = this.slidearr.length;
+                this.mark++;
+                if (this.mark === len) { //当遍历到最后一张图片置零
+                    this.mark = 0
+                }
+            },
+            play: function() {
+                setInterval(this.autoPlay, 2500)
+            },
+            change: function(i) {
+                this.mark = i
+            }
+        }
+    })
+    new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                parentmsg: '34',
+                slidearr: [{
+                    title : '品牌传播管理',
+                    content : '通过互联网方式，使企业互联网上有丰富的内容呈现，提升用户对品牌的认知，促进品牌的广泛传播，打造专业的企业形象。'
+                },{
+                    title : '品牌传播2',
+                    content : '通过互联网方式，使企业互联网上有丰富的内容呈现，提升用户对品牌的认知，促进品牌的广泛传播，打造专业的企业形象。'
+                },{
+                    title : '品牌传播3',
+                    content : '通过互联网方式，使企业互联网上有丰富的内容呈现，提升用户对品牌的认知，促进品牌的广泛传播，打造专业的企业形象。'
+                }],
+                slidesub:[{
+                    title : '负面舆情1',
+                    content : '对企业出现的负面舆情，有计划的制定与实施管理措施，应对现有的互联网舆情，最大程度的减轻对企业带来的伤害。'
+                },{
+                    title : '负面舆情管理2',
+                    content : '对企业出现的负面舆情，有计划的制定与实施管理措施，应对现有的互联网舆情，最大程度的减轻对企业带来的伤害。'
+                },{
+                    title : '负面舆情管理3',
+                    content : '对企业出现的负面舆情，有计划的制定与实施管理措施，应对现有的互联网舆情，最大程度的减轻对企业带来的伤害。'
+                }]
+            }
+        },
+        mounted: function() {
+            $('.footer').load('common/footer.html');
+        },
+    })
+
+</script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    .footerBg{
+        color: #a6b0b9;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+        text-align: center;
+        height: 206px;
+        background: #324760;
+       /* box-shadow: 0px 1px 30px rgba(8,35,63,0.5);*/
+    }
+    .footlogoPanel{
+        display: flex;
+        height: 60px;
+        line-height: 60px;
+        width: 150px;
+        padding: 15px;
+        margin: auto;
+    }
+    #footPanel{
+        display:flex;
+        padding: 15px;
+    }
+    .footFlex{
+        margin-left: 70px;
+    }
+
+    .footFlex ul, li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: table;
+        height: 21px;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: left;
+        letter-spacing: 0.8333334px;
+    }
+    .about  .footFlex ul, li{
+        cursor: pointer;
+    }
+    a,a:hover{
+        text-decoration: none;
+        color: #ffffff;
+
+    }
+    .footFlex ul, li:first-child{
+        margin-bottom: 10px;
+    }
+    .QRPanel{
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0.7777778px;
+        margin-top: 20px;
+    }
+</style>
+<body>
+<div class="footerBg" id="footApp">
+    <div class="row-bg el-row is-justify-center el-row--flex">
+        <div class="el-col el-col-6">
+            <a class="footlogoPanel" href="index.html">
+                <img class="logo" src="img/logo.png"/>
+            </a>
+        </div>
+        <div class="el-col el-col-12" id="footPanel">
+            <div class="about footFlex">
+                <ul>
+                    <li class="companyHref"><a href="company.html">关于杉江</a></li>
+                    <li class="companyHref"><a href="company.html">关于我们</a></li>
+                    <li class="companyHref"><a href="company.html">公司介绍</a></li>
+                </ul>
+            </div>
+            <div class="contact footFlex">
+                <ul>
+                    <li>联系我们</li>
+                    <li>电话：021-6136-0329</li>
+                    <li>邮箱：sbyshiun@hontmail</a></li>
+                    <li>QQ：1017219684</li>
+                </ul>
+            </div>
+        </div>
+        <div class="el-col el-col-6" style="margin: auto">
+            <img src="./img/QR.png">
+            <div class="QRPanel"><img src="./img/wechat.png"/> 扫一扫关注我们</div>
+        </div>
+    </div>
+ </div>
+</body>
+<script type="text/javascript">
+        document.getElementsByClassName("companyHref").onclick = function(){
+            window.location.href = 'company.html'
+        }
+</script>
+</html>

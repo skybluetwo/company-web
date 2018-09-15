@@ -1,0 +1,297 @@
+body{
+    font-family:PingFangSC,"Microsoft YaHei","Times New Roman";
+}
+[v-cloak] { display: none }
+.el-main {
+    color: #333;
+    text-align: center;
+    padding: 0px;
+}
+.el-container{
+    margin-top: 17px;
+}
+body > .el-container {
+    margin-bottom: 40px;
+}
+.el-aside, .el-main {
+    overflow: inherit;
+    -webkit-box-sizing: border-box;
+}
+header.el-header{
+    background: #324760;
+    line-height: 60px;
+    height: 60px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 0px 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    z-index: 10;
+}
+.logoPanel{
+    display: flex;
+    height: 60px;
+    line-height: 60px;
+    width: 150px;
+    padding: 15px;
+    float: left;
+    cursor: pointer;
+}
+.logo{
+    width: 105px;
+    height: 26px;
+}
+.headLink {
+    float: right;
+    line-height: 60px;
+    margin-right: 12px;
+    width: calc(100% - 180px);
+}
+.headLink a {
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.center {
+    position: absolute;
+    z-index: 4;
+    margin: auto;
+    right: 0px;
+    left: 0px;
+    text-align: center;
+    bottom: 0px;
+    top: 0;
+}
+#menuapp {
+    float: left;
+    margin-left: 30px;
+    margin-top: 9px;
+}
+.topHeader{
+    display: inline-block;
+    margin-bottom: 0px;
+    width: 100%;
+    text-align: right;
+}
+.topHeader li{
+    display:inline-block ;
+    font-size: 14px;
+    color: #c8c8c8;
+    margin-left: 20px;
+    cursor: pointer;
+    width: calc(10%);
+    text-align: center;
+}
+.active a{
+    color: #1E88F5
+}
+.topBg{
+    height: 630px;
+    background: url("../img/seobg.png");
+    background-size:cover;
+}
+.home{
+    background: url("../img/home.png");
+    background-size:cover;
+}
+.orm .topBg{
+    background: url("../img/orm.png");
+    background-size:cover;
+}
+.text-middle{
+    display: flex;
+    justify-content:center;
+    align-items:Center;
+    height: calc(100% - 60px);
+}
+.middle-box{
+    display: table;
+    height: calc(100%);
+    width: 100%;
+}
+
+.middle-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.el-row {
+    margin-bottom: 20px;
+}
+.el-row:last-child {
+     margin-bottom: 0;
+ }
+.el-col {
+    border-radius: 4px;
+}
+
+.grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+}
+.row-bg {
+    padding: 10px 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.seoText{
+    color: #ffffff;
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 60px;
+    width: 100%;
+    height: 60px;
+    letter-spacing: 2.454545px;
+}
+.seoSubtext{
+    width: 831.52px;
+    height: 74px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 37px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+.problemText{
+    color: #0d253e;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 42px;
+    margin-top: 60px;
+}
+.problemSubText{
+    height: 30px;
+    color: #A6B0B9;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+.hard{
+    height: 220px;
+    width: 100%;
+    margin-bottom: 80px;
+    margin-top: 60px;
+}
+.hard .circleList{
+    margin:5px auto;
+    text-align: center;
+}
+.circleImg,
+.advantageList{
+
+    height: 220px;
+    width: calc(20%);
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+.advantageList{
+    height: 260px;
+}
+
+.circleImg .major{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: relative;
+    display: block;
+    background: #f9fafc;
+    text-align: center;
+    margin: auto;
+}
+.advantageList .middle-box{
+    height: calc(100% + 40px);
+}
+.advantageList .advantageLog{
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    width: 260px;
+    height: 320px;
+    background: #ffffff;
+    color: #0d253e;
+}
+.circleImg .majorName{
+    position: relative;
+    color: #0d253e;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26px;
+    top: 40px;
+}
+.fourImg{
+    width: 250px;
+    height: 250px;
+    margin-bottom: 5px;
+}
+
+.fourImg:nth-child(2n){
+    margin-left: 5px;
+}
+.advantage{
+    margin-top: 80px;
+    background: #f9fafc;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+.top40{
+    position: absolute;
+    z-index: 4;
+    margin: auto;
+    right: 0px;
+    left: 0px;
+    text-align: center;
+    top: 50px;
+}
+.advantageText{
+    height: 24px;
+    color: #0d253e;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 40px;
+}
+.advantageSubText{
+    color: #A6B0B9;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 1.7;
+    padding: 0px 20px;
+}
+.honor{
+    background-color: #1E88F5;
+    padding: 60px 100px;
+}
+.honor div{
+    float: left;
+    width: 100%;
+    text-align: left;
+    color: #ffffff;
+}
+.seoAdvan{
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 20px 0px;
+}
+.seoAdvanSub{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+}

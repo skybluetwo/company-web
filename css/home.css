@@ -1,0 +1,214 @@
+body{
+    font-family:PingFangSC,"Microsoft YaHei","Times New Roman";
+}
+.circleImg .homeicon{
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+.circleImg .majorName{
+    position: relative;
+    color: #0d253e;
+    font-size: 20px;
+    top: 40px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 32px;
+}
+.circleImg .majorSubName{
+    position: relative;
+    color: #A6B0B9;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    top: 40px;
+}
+.circleImg{
+    width: calc(25%)
+}
+.advantageList {
+    width: calc(22%);
+    height: 375px;
+}
+.service .advantageList{
+    width: calc(14.67%);
+    height:160px
+}
+.advantageList .advantageLog{
+    height: 375px;
+}
+.service .advantageList .advantageLog{
+    height: 160px;
+    width: 160px;
+    background: #ffffff;
+    color: #0d253e;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0px 7px 40px #f0f2f5;
+}
+.service .top40{
+    top: 20px;
+}
+.service .cartText{
+    width: 100%;
+    bottom: 40px;
+    font-size: 14px;
+    position: absolute;
+    text-align: center;
+
+}
+.top0{
+    z-index: 4;
+    margin: auto;
+    right: 0px;
+    left: 0px;
+    text-align: center;
+    top: 0px;
+    height: 160px;
+}
+.cartText{
+    height: 21px;
+    color: #0d253e;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    padding: 15px;
+}
+.cartSubText{
+    color: #A6B0B9;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: left;
+    padding: 15px;
+    height: 145px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+}
+.bottomMore{
+    height: 21px;
+    color: #1e88f5;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    bottom: 0px;
+    padding: 0px 15px;
+    cursor: pointer;
+}
+.contactUs{
+    height: 536px;
+    width:100%;
+    position: relative;
+    background: url("../img/Bitmap.png")no-repeat;
+    background-size:cover;
+}
+#contactMessage{
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+#contactMessage .from-group input{
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 600px;
+    height: 64px;
+    border: 0px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    text-indent: 20px;
+}
+#contactMessage .from-group input#contactSubmit{
+    background: #1e88f5;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.9999999px;
+    box-shadow: 0px 0px 20px rgba(30,136,245,0.4);
+}
+#contactTool{
+    width: 80px;
+    height: 396px;
+    color: #ffffff;
+    font-size: 16px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 60px;
+    margin: auto;
+    text-align: center;
+}
+#contactTool .toolList{
+    cursor: pointer;
+    position: relative;
+}
+.phone{
+    display: none;
+    position: absolute;
+    right: 120px;
+    width: 200px;
+    top: 0;
+    bottom: 0px;
+    margin: auto;
+    height: 60px;
+    font-size: 20px;
+    background: rgba(0,0,0,0.5);
+    line-height: 60px;
+    border-radius: 10px;/*  display: none;*/
+    position: absolute ;
+    right: calc(100% + 10px);
+}
+.toolList:hover .phone{
+    display: block;
+}
+#contactTool .toolList img{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#contactTool .toolList:first-child img{
+    margin-top: 0px;
+}
+input::-webkit-input-placeholder{
+    color: #fff;
+    font-size: 20px;
+    line-height: 26px;
+}
+　　:-moz-placeholder {
+    　　color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+}
+　　::-moz-placeholder {
+    　　color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+}
+　　:-ms-input-placeholder {
+    color : #fff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+}
+[v-cloak] { display: none }

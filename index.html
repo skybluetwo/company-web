@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>杉达</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--解决input手机端点击放大问题-->
+    <meta name="viewport" content="width=1366,inital-scale=1.0,user-scalable=no;">
+    <!-- IE兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 国产浏览器高速模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入组件库 -->
+    <link rel="stylesheet" href="bootstraps/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/commons.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <section class="el-container is-vertical">
+        <header class="el-header" style="height: 60px;">
+            <a class="logoPanel" href="index.html">
+                <img class="logo" src="img/logo.png"/>
+            </a>
+            <div class="headLink">
+                <ul class="topHeader">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="seo.html">SEO优化</a></li>
+                    <li><a href="sem.html">SEM管理</a></li>
+                    <li><a href="orm.html">ORM管理</a></li>
+                    <li><a href="manage.html">案例</a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="el-main">
+            <div class="topBg home">
+                <div class="middle-box">
+                    <div class="middle-inner">
+                        <p><span class="seoText">整合营销服务提供商</span><br/></p>
+                        <p><div class="seoSubtext">Make company great!</div></p>
+                    </div>
+                </div>
+            </div>
+            <div class="meetingProblem">
+                 <div class="problemText">Sandsea服务，您值得信赖的选择</div>
+                <div class="problemSubText">搜索引擎优化—SEO，搜索引擎推广—SEM，在线名誉管理—ORM</div>
+            </div>
+
+            <div class="panel-body hard" style="margin-bottom: 0px">
+                <div class="circleList">
+                    <div class="circleImg">
+                        <div class="homeicon" >
+                            <img class="center" src="img/SEOicon.png"/>
+                        </div>
+                        <div class="majorName">SEO</div>
+                        <div class="majorSubName">搜索引擎优化</div>
+                    </div>
+                    <div class="circleImg">
+                        <div class="homeicon" >
+                            <img  class="center" src="img/semicon.png"/>
+                        </div>
+                        <div class="majorName">SEM</div>
+                        <div class="majorSubName">搜索引擎优化</div>
+                    </div>
+                    <div class="circleImg">
+                        <div class="homeicon" >
+                            <img  class="center" src="img/ormicon.png"/>
+                        </div>
+                        <div class="majorName">ORM</div>
+                        <div class="majorSubName">搜索引擎优化</div>
+                    </div>
+                </div>
+            </div>
+            <div class="advantage" style="margin-top: 0px">
+                <div class="row-bg  el-row is-justify-center el-row--flex">
+                    <div class="meetingProblem">
+                        <div class="problemText">营销咨询</div>
+                        <div class="problemSubText">Marketing Consulting</div>
+                    </div>
+                </div>
+                <div class="el-row">
+                    <div class="panel-body">
+                        <div class="circleList">
+                            <div class="advantageList" style="margin-bottom: 20px" v-for="(item,index) in consult":key="item.id">
+                                <div class="advantageLog" >
+                                    <img class="top0" :src="'http://www.mysandsea.com:8080'+item.image"/>
+                                    <div class="cartText">{{item.title}}</div>
+                                    <div class="cartSubText">{{item.describe}} </div>
+                                    <div class="bottomMore" @click="moreConsult(item.id)">了解更多</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service" style="margin-bottom: 80px">
+                <div  class="row-bg  el-row is-justify-center el-row--flex">
+                    <div class="meetingProblem">
+                        <div class="problemText">服务客户</div>
+                        <div class="problemSubText">Service Customer</div>
+                    </div>
+                </div>
+                <div  class="el-row">
+                    <div class="panel-body">
+                        <div class="circleList">
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img class="top40" src="img/service1.png"/>
+                                    <div class="cartText">安安宠医</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service2.png"/>
+                                    <div class="cartText">乐享屋</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service3.png"/>
+                                    <div class="cartText">拍拍贷</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service4.png"/>
+                                    <div class="cartText">仁力名才</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service5.png"/>
+                                    <div class="cartText">诶站国际</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service6.png"/>
+                                    <div class="cartText">太美医疗</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="el-row">
+                    <div class="panel-body">
+                        <div class="circleList">
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img class="top40" src="img/service7.png"/>
+                                    <div class="cartText">上置集团</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service8.png"/>
+                                    <div class="cartText">云敞科技</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service9.png"/>
+                                    <div class="cartText">晨驭科技</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service10.png"/>
+                                    <div class="cartText">宝趣旅游</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service11.png"/>
+                                    <div class="cartText">绿霖美建</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/service12.png"/>
+                                    <div class="cartText">唯存摄影</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contactUs">
+                <form id="contactMessage">
+                    <div class="from-group">
+                       <input type="text" id="name" placeholder="姓名（必填）" required novalidate="true"/>
+                    </div>
+                    <div class="from-group">
+                        <input type="tel" id="phone" placeholder="电话（必填）" required pattern="^1[345678][0-9]{9}$" oninvalid="setCustomValidity('请输入手机号码！');" oninput="setCustomValidity('')"/>
+                    </div>
+                    <div class="from-group">
+                        <input type="text" id="company" placeholder="公司名称（必填）"required novalidate="true"/>
+                    </div>
+                    <div class="from-group">
+                        <input id="contactSubmit" type="button" @click="formSubmit()" value="现在咨询" />
+                    </div>
+                </form>
+                <div id="contactTool">
+                    <div class="toolList">
+                        <a href="tencent://message/?uin=1017219684&Site=杉达&Menu=yes">
+                            <img border="0" src="img/tool1.png?p=1:你的QQ号:1017219684" alt="图片不正常时显示的文字" />
+                        </a>
+                      <!--  <img src="img/tool1.png">-->
+                        <span>在线咨询</span>
+                    </div>
+                    <div class="toolList">
+                        <img src="img/tool2.png">
+                        <div class="phone">021-6136-0329</div>
+                        <span>联系我们</span>
+                    </div>
+                    <div class="toolList" id="backUp">
+                        <img src="img/tool3.png">
+                        <span>返回顶部</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="footer"></div>
+    </section>
+</div>
+</body>
+
+<script src="jQuery/jquery-2.1.1.min.js"> </script>
+<script src="js/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    var form = new Vue({
+        el: '#app',
+        data: {
+            consult : ''
+        },
+        mounted: function() {
+            $('.footer').load('common/footer.html');
+            var _self = this;
+            $.ajax({
+                type: "get",
+                url: "http://www.mysandsea.com:8080/title/",
+                dataType: "json",
+                success: function(data){
+                    if(data.status == 0 ){
+                        _self.consult = data.data;
+                        console.log(data.data)
+                    }
+                    else{
+                        alert(data.msg)
+                    }
+                }
+            });
+        },
+        methods: {
+            moreConsult:function (id) {
+                window.location.href ="article.html?"+id;
+            },
+            formSubmit: function () {
+                var name= $("#name").val();
+                var phone= $("#phone").val();
+                var company= $("#company").val();
+                var dataF = new FormData();
+                dataF.append("usename",name );
+                dataF.append("mobile",phone );
+                dataF.append("companyName",company );
+                $.ajax({
+                    type: "POST",
+                    url: "http://www.mysandsea.com:8080/customer/",
+                    data: {username:name, mobile:phone,companyName:company},
+                    dataType: "json",
+                    success: function(data){
+                        if(data.status == 0 ){
+                            alert("客服人员稍后与您联系")
+                        }
+                        else{
+                            alert("请您重新留言")
+                        }
+                    }
+                });
+            }
+        }
+    })
+    form.$watch("arrayData", function (value) {});
+    $("#backUp").click(function () {
+        window.scrollTo(0,0);
+    })
+</script>
+</html>

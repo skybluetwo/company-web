@@ -1,0 +1,106 @@
+.twoHeiht{
+    height: 530px;
+    width: 530px;
+    display: inline-block;
+    margin: auto;
+    background-color: #f9fafc;
+    padding: 60px 100px;
+}
+.twoHeiht div{
+    color: #152c45;
+}
+.twoHeiht .seoAdvan{
+    color: #152c45;
+    font-size: 30px;
+    font-weight: 500;
+}
+.twoHeiht .seoAdvanSub{
+    color: #4b5c70;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+}
+.topBg{
+    background: url("../img/company.png");
+    height: 453px;
+    position: relative;
+
+}
+.companyMessage{
+    border-radius: 0;
+    width: 900px;
+    height: 341px;
+    background: #1e88f5;
+    color: #ffffff;
+    font-size: 16px;
+    position: absolute;
+    bottom: -170px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+.companyText{
+    font-size: 30px;
+}
+.companySubtext{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+}
+.companySubTwoText{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0px 60px;
+    text-align: justify;
+}
+.advantage{
+    background: #ffffff;
+}
+.company .advantageList{
+    height: 400px;
+}
+.company .advantageList .advantageLog {
+    height: 400px;
+    box-shadow: 0px 7px 40px #f0f2f5;
+}
+.top40{
+    top:20px
+}
+.advantageText{
+    color: #1e88f5;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    position: relative;
+    letter-spacing: 0px;
+}
+.advantageText:after{
+    content: "━━━";
+    position: absolute;
+    bottom: -27px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.middle-inner p:first-child{
+    margin-top: 80px;
+}
+.advantageSubText{
+    margin: auto;
+    margin-top: 40px;
+    width: 80%;
+    height: 95px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    overflow-y: hidden;
+    text-align: justify;
+}
+.advantageList .middle-box{
+    height: calc(100% + 100px)
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>杉达</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--解决input手机端点击放大问题-->
+    <meta name="viewport" content="width=1366,inital-scale=1.0,user-scalable=no;">
+    <!-- IE兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 国产浏览器高速模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入组件库 -->
+    <link rel="stylesheet" href="bootstraps/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/commons.css">
+</head>
+<style>
+    .topBg{
+        width: 100%;
+        height: 630px;
+        background: url("./img/sembg.png");
+        background-size:cover;
+    }
+
+    .circleImg, .advantageList{
+        width: 15%;
+    }
+    .advantageList .advantageLog{
+          width: 160px;
+          height: 260px;
+      }
+    .serviceType  .advantageList{
+        width: 27.5%;
+        height: 818px;
+    }
+    .serviceType .advantageList .advantageLog{
+        border-radius: 4px;
+        width: 360px;
+        height: 818px;
+        border: 1px solid #eeeeee;
+        background: #ffffff;
+        color: #0d253e;
+        font-size: 32px;
+        line-height: 42px;
+        box-shadow: 0px 20px 60px rgba(13,37,62,0.05);
+        margin: auto;
+    }
+    .advantageText{
+        height: 40%;
+        font-size: 64px;
+        line-height: 1.7;
+        position: relative;
+    }
+    .advantageText:after{
+        content: '';
+        width: 93px;
+        height: 1px;
+        border-bottom: 1px solid #0d253e;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .advantageSubText{
+        height: 60%;
+        position: absolute;
+    }
+    .serviceType  .advantageList .middle-box {
+        height: calc(100%);
+    }
+    .serviceType  .advantageText{
+        height: 28.3%;
+        font-size: 24px;
+        margin-top: 0px;
+        background: #1e88f5;
+        color: #ffffff;
+        box-shadow: 0px 2px 30px rgba(30,136,245,0.3);
+    }
+    .serviceType  .advantageText:after{
+        display: none;
+    }
+    .serviceType  .advantageSubText{
+        height: 71.7%;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+    .serviceType  .advantageSubText{
+        color: #ffffff;
+    }
+    .serviceTypeFirst{
+        font-size: 70px;
+        line-height: 92px;
+        height: 92px;
+    }
+    .serviceTypeSecond{
+        height: 37px;
+        color: #ffffff;
+        width: 84px;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 37px;
+        position: relative;
+        width: 84px;
+        margin: auto;
+        text-align: center;
+    }
+    .serviceTypeSecond:after{
+        content: '';
+        width: 40px;
+        height: 1px;
+        border-bottom: 1px solid #fff;
+        position: absolute;
+        left: -70px;
+        top: 0px;
+        bottom: 0px;
+        margin: auto;
+    }
+    .serviceTypeSecond:before{
+        content: '';
+        width: 40px;
+        height: 1px;
+        border-bottom: 1px solid #fff;
+        position: absolute;
+        right: -70px;
+        top: 0px;
+        bottom: 0px;
+        margin: auto;
+    }
+    .serviceTypeThird{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .serviceTypeFour{
+        font-size: 22px;
+    }
+    .serviceType  .advantageList:first-child ul li{
+        width: 150px;
+    }
+    .serviceType  .advantageList:nth-child(2n) ul li{
+        width: 245px;
+        line-height: 30px;
+    }
+    .serviceType  .advantageList:first-child ul li div{
+        width: 150px;
+        line-height: 30px;
+    }
+
+    .serviceType .advantageSubText ul{
+        width: 100%;
+        padding: 40px;
+    }
+    .serviceType .advantageSubText ul li{
+        color: #0d253e;
+        font-size: 18px;
+        font-weight: 400;
+        margin: auto;
+        width: 280px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .serviceType .advantageSubText ul li:before{
+        content: '\2714';
+        color: #1e88f5;
+        position: absolute;
+        left: -30px;
+    }
+</style>
+<body>
+<div id="app">
+    <el-container>
+        <el-header>
+            <a class="logoPanel" href="index.html">
+                <img class="logo" src="img/logo.png"/>
+            </a>
+            <div class="headLink">
+                <ul class="topHeader">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="seo.html">SEO优化</a></li>
+                    <li class="active"><a href="sem.html">SEM管理</a></li>
+                    <li><a href="orm.html">ORM管理</a></li>
+                    <li><a href="manage.html">案例</a></li>
+                </ul>
+            </div>
+        </el-header>
+        <el-main>
+            <div class="topBg">
+                <div class="middle-box">
+                    <div class="middle-inner">
+                        <p><span class="seoText">SEM搜索引擎推广</span><br/></p>
+                        <p><div class="seoSubtext">通过技术手段，用户搜索关键词，让网站在搜索引擎排名更靠前， 获得更多免费流量，节省广告费用</div></p>
+                    </div>
+                </div>
+            </div>
+            <div class="meetingProblem">
+                <div class="problemText">您经常被这些烦恼困惑嘛</div>
+                <div class="problemSubText">百度竞价效果不理想、不满意，不知如何下手！</div>
+            </div>
+            <el-row type="flex" class="row-bg" justify="center" style="margin-top: 80px">
+                <el-col :span="20">
+                    <div >
+                        <img src="./img/sixProblem.png"/>
+                    </div>
+                </el-col>
+            </el-row>
+
+            <div class="advantage">
+                <el-row type="flex" class="row-bg " justify="center">
+                    <div class="meetingProblem">
+                        <div class="problemText">我们给您五大承诺</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <div class="panel-body">
+                        <div class="circleList">
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <div class="advantageText">1</div>
+                                    <div class="advantageSubText">花最少的钱，达到最好的效果</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <div class="advantageText">2</div>
+                                    <div class="advantageSubText">帮助您做到，低投入高产出的百度竞价效果</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <div class="advantageText">3</div>
+                                    <div class="advantageSubText">免费诊断账户，并且会把诊断书与大概的优化方案免费送给客户，绝对不受一分钱</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <div class="advantageText">4</div>
+                                    <div class="advantageSubText">100%承诺没有任何的效果，不收一分钱的托管费用，用指标衡量效果</div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <div class="advantageText">5</div>
+                                    <div class="advantageSubText">绝对永久保密客户资料，严格遵守职业道德</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </el-row>
+             </div>
+            <div class="serviceType">
+                <el-row type="flex" class="row-bg " justify="center">
+                    <div class="meetingProblem">
+                        <div class="problemText">我们能为您做那些服务</div>
+                    </div>
+                </el-row>
+                <el-row>
+                    <div class="panel-body " >
+                        <div class="circleList">
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <div class="advantageText">
+                                        <div class="middle-box">
+                                            <div class="middle-inner">
+                                                <div class="serviceTypeFirst">A</div>
+                                                <div class="serviceTypeSecond">托管型</div>
+                                                <div class="serviceTypeThird">适合企业</div>
+                                                <div class="serviceTypeFour">所有（已有账户）</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="advantageSubText">
+                                        <ul class="listUl">
+                                            <li><div>1.账户预算调整</div></li>
+                                            <li><div>2.推广时段调整</div></li>
+                                            <li><div>3.推广地域调整</div></li>
+                                            <li><div>4.账户结构优化</div></li>
+                                            <li><div>5.否定词的设置</div></li>
+                                            <li><div>6.关键词的扩充</div></li>
+                                            <li><div>7.关键词出价调整</div></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <div class="advantageText">
+                                        <div class="middle-box">
+                                            <div class="middle-inner">
+                                                <div class="serviceTypeFirst">B</div>
+                                                <div class="serviceTypeSecond">搭建型</div>
+                                                <div class="serviceTypeThird">适合企业</div>
+                                                <div class="serviceTypeFour">所有（尚未搭建账户）</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="advantageSubText">
+                                        <ul class="listUl">
+                                            <li><div>
+                                                1.根据行业和预算分配考虑
+                                                账户框架</div></li>
+                                            <li><div>
+                                                2.对关键词进行拓展，筛选
+                                                和分类</div></li>
+                                            <li><div>3.建立搜索推广计划和单元</div></li>
+                                            <li><div>4.撰写创意、蹊径等物料</div></li>
+                                            <li><div>5.后续设置（包括投放低于、
+                                                投放时段、匹配方式、预</div></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <div class="advantageText">
+                                        <div class="middle-box">
+                                            <div class="middle-inner">
+                                                <div class="serviceTypeFirst">C</div>
+                                                <div class="serviceTypeSecond">诊断型</div>
+                                                <div class="serviceTypeThird">适合企业</div>
+                                                <div class="serviceTypeFour">所有（账户推广效果不好）</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="advantageSubText">
+                                        <ul class="listUl">
+                                            <li><div>1.诊断账户结构是否合理</div></li>
+                                            <li><div>2.诊断推广时段是否合理</div></li>
+                                            <li><div>3.诊断账户关键词是逗准确覆盖了业务内容</div></li>
+                                            <li><div>4.诊断账户关键词是否采用了合理的匹配方式</div></li>
+                                            <li><div>5.诊断账户关键词出价是否合理</div></li>
+                                            <li><div>6.诊断创意的撰写是逗与关键词匹配</div></li>
+                                            <li><div>7.诊断创意的链接指向是否正确和相关</div></li>
+                                            <li><div>8.诊断设置的地域转化效果</div></li>
+                                            <li><div>9.诊断设置的客服软件是否友好</div></li>
+                                            <li><div>10.诊断竞价目标网站的用户体验</div></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </el-row>
+            </div>
+            <div class="advantage">
+                <el-row type="flex" class="row-bg " justify="center">
+                    <div class="meetingProblem">
+                        <div class="problemText">竞价托管给您带来的六大好处</div>
+                        <div class="problemSubText">Service Customer</div>
+                    </div>
+                </el-row>
+
+                <div class="el-row" style="margin-top: 40px">
+                    <img src="img/process.png">
+                </div>
+
+            </div>
+        </el-main>
+        <div class="footer"></div>
+    </el-container>
+</div>
+</body>
+
+<script src="jQuery/jquery-2.1.1.min.js"> </script>
+<script src="js/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return { visible: false }
+        },
+        mounted: function() {
+            $('.footer').load('common/footer.html');
+        },
+    })
+</script>
+</html>

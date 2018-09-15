@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>杉达</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--解决input手机端点击放大问题-->
+    <meta name="viewport" content="width=1366,inital-scale=1.0,user-scalable=no;">
+    <!-- IE兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 国产浏览器高速模式 -->
+    <meta name="renderer" content="webkit">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入组件库 -->
+    <link rel="stylesheet" href="bootstraps/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/commons.css">
+</head>
+<style>
+    .honor{
+        max-width: 550px;height: 100%;  margin: auto;
+    }
+    .honor .circle{
+        width: 8px;
+        height:8px;
+        border-radius: 50%;
+        background: #3c3c3c;
+        display: inline-block;
+        margin: 1px 3px;
+    }
+    .honor .active{
+        width: 10px;
+        height:10px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        background: transparent;
+        margin-top: 0px;
+    }
+</style>
+<body>
+<div id="app">
+    <section class="el-container is-vertical">
+        <header class="el-header" style="height: 60px;">
+            <a class="logoPanel" href="index.html">
+                <img class="logo" src="img/logo.png"/>
+            </a>
+            <div class="headLink">
+                <ul class="topHeader">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="active"><a href="#">SEO优化</a></li>
+                    <li><a href="sem.html">SEM管理</a></li>
+                    <li><a href="orm.html">ORM管理</a></li>
+                    <li><a href="manage.html">案例</a></li>
+                </ul>
+            </div>
+        </header>
+        <main class="el-main">
+            <div class="topBg">
+                <div class="middle-box">
+                    <div class="middle-inner">
+                        <p><span class="seoText">SEO搜索引擎优化</span><br/></p>
+                        <p><div class="seoSubtext">通过技术手段，用户搜索关键词，让网站在搜索引擎排名更靠前， 获得更多免费流量，节省广告费用</div></p>
+                    </div>
+                </div>
+            </div>
+            <div class="meetingProblem">
+                <div class="problemText">遇到的问题</div>
+                <div class="problemSubText">网站内容，网站关键词设置，用户UEO体验，网站URL/架构</div>
+            </div>
+
+            <div class="panel-body hard">
+                <div class="circleList">
+                    <div class="circleImg">
+                        <div class="major" >
+                            <img class="center" src="img/webContent.png"/>
+                        </div>
+                        <span class="majorName">网站内容</span>
+                    </div>
+                    <div class="circleImg">
+                        <div class="major" >
+                            <img  class="center" src="img/key.png"/>
+                        </div>
+                        <span class="majorName">网站关键词设置</span>
+                    </div>
+                    <div class="circleImg">
+                        <div class="major" >
+                            <img  class="center" src="img/userUE0.png"/>
+                        </div>
+                        <span class="majorName">用户UEO体验</span>
+                    </div>
+                    <div class="circleImg">
+                        <div class="major" >
+                            <img  class="center" src="img/URL.png"/>
+                        </div>
+                        <span class="majorName">网站URL/架构</span>
+                    </div>
+                </div>
+            </div>
+            <div  class="row-bg  el-row is-justify-center el-row--flex">
+                <div class="el-col el-col-10">
+                    <div style="max-width: 650px; margin: auto;">
+                        <img class="fourImg" src="./img/seo-1.png"/>
+                        <img class="fourImg" src="./img/seo-2.png"/>
+                        <img class="fourImg" style="margin-bottom: 0px;" src="./img/seo-3.png"/>
+                        <img class="fourImg" style="margin-bottom: 0px;" src="./img/seo-4.png"/>
+                    </div>
+                </div>
+                <div class="el-col el-col-10">
+                    <div class="honor" style="max-width: 550px;height: 100%;  margin: auto;"
+                         v-for="(item, index) in textList" v-show="index===mark" :key="index">
+                        <div style="height:47px;">
+                            <img src="./img/honor.png" style="float: left;height: 47px">
+                        </div>
+                        <div class="seoAdvan" style="height:42px">{{item.title}}</div>
+                        <div class="seoAdvanSub" style="width: 100%">{{item.content}}</div>
+                        <div style="bottom: 100px;position: absolute">
+                            <div class="circle" v-for="(data, index) in textList"
+                                 :key="index" @click="change(index)"
+                                 :class="{'active':index===mark}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="advantage">
+                <div  class="row-bg  el-row is-justify-center el-row--flex">
+                    <div class="meetingProblem">
+                        <div class="problemText">我们的优势</div>
+                        <div class="problemSubText">Service Customer</div>
+                    </div>
+
+                </div>
+                <div  class="el-row">
+                    <div class="panel-body">
+                        <div class="circleList">
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img class="top40" src="img/advantage1.png"/>
+                                    <div class="middle-box">
+                                        <div class="middle-inner">
+                                            <p><span class="advantageText">提升品牌形象</span><br/></p>
+                                            <p><div class="advantageSubText">高排名=广泛用户认知度，有助于提升公司在用户心中的形象</div></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/advantage2.png"/>
+                                    <div class="middle-box">
+                                        <div class="middle-inner">
+                                            <p><span class="advantageText">引入目标客户</span><br/></p>
+                                            <p><div class="advantageSubText">SEO流量较为精准，为网站引入精准目标客户</div></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/advantage3.png"/>
+                                    <div class="middle-box">
+                                        <div class="middle-inner">
+                                            <p><span class="advantageText">效果长期稳定</span><br/></p>
+                                            <p><div class="advantageSubText">相较于竞价排名，SEO排名更为持久，后期维护成本低，持续时间久</div></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantageList">
+                                <div class="advantageLog" >
+                                    <img  class="top40" src="img/advantage4.png"/>
+                                    <div class="middle-box">
+                                        <div class="middle-inner">
+                                            <p><span class="advantageText">较高投资回报率</span><br/></p>
+                                            <p><div class="advantageSubText">搜索用户精准度及转化意向高，投资回报率高</div></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="footer"></div>
+    </section>>
+</div>
+</body>
+
+<script src="jQuery/jquery-2.1.1.min.js"> </script>
+<script src="js/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            mark: 0, //比对图片索引的变
+            textList :[{
+                title: 'SEO优势',
+                content: '通过网站优化，排名比较稳定，不用担心无效点击，相较于SEM，不用担心上线下线问题，节省广告费用，弥补劣势。',
+            },{
+                title: 'SEM优势',
+                content: '通过网站优化，排名比较稳定，不用担心无效点击，相较于SEM，不用担心上线下线问题，节省广告费用，弥补劣势。',
+            },{
+                title: 'ORM优势',
+                content: '通过网站优化，排名比较稳定，不用担心无效点击，相较于SEM，不用担心上线下线问题，节省广告费用，弥补劣势。',
+            }]
+        },
+        mounted: function() {
+            $('.footer').load('common/footer.html');
+        },
+        created : function(){
+            this.play()
+        },
+        methods:{
+            autoPlay: function (){
+                var len = this.textList.length;
+                this.mark++;
+                if (this.mark === len) { //当遍历到最后一张图片置零
+                    this.mark = 0
+                }
+            },
+            play: function() {
+                setInterval(this.autoPlay, 2500)
+            },
+            change: function(i) {
+                this.mark = i
+            }
+        }
+    })
+</script>
+</html>
